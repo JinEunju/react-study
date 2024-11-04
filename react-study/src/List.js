@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./List.css";
 
 const List = () => {
-  const navigate = useNavigate(); // navigate
+  const navigate = useNavigate();
   const [lists, setLists] = useState([]);
   const [error, setError] = useState(null);
   useEffect(() => {

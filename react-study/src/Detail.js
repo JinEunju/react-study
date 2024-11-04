@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Detail.css";
 const Detail = () => {
+  const id = useParams();
   const [post, setPost] = useState(null);
   const [error, setError] = useState(null);
   useEffect(() => {
     fetch(
-      "https://thingproxy.freeboard.io/fetch/https://koreandummyjson.site/api/posts/1"
+      `"https://thingproxy.freeboard.io/fetch/https://koreandummyjson.site/api/posts/${id}`
     )
       .then((response) => {
         if (!response.ok) {
@@ -16,7 +17,7 @@ const Detail = () => {
       })
       .then((data) => setPost(data.post))
       .catch((error) => setError(`error data: ${error.message}`));
-  }, []);
+  }, [id]);
 
   if (error) {
     return <div>{error}</div>;
