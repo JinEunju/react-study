@@ -1,0 +1,18 @@
+.listArea {
+  padding: 0;
+  list-style: none;
+}
+.listArea li {
+  padding: 10px;
+  border-bottom: 1px solid gray;
+}
+.listHead {
+  display: flex;
+  align-items: center;
+}
+.listHead .title {
+  flex: 1;
+}
+.listHead .date {
+  flex: 0 0 auto;
+}
